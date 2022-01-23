@@ -427,7 +427,9 @@ header ul li:hover {
   padding: 0;
   padding-top: 0.5rem;
 }
-
+.accordion-panel img {
+  padding: 1rem;
+}
 /* END OF PRODUCTS */
 /* PACKAGING */
 .packaging-head h2 {
