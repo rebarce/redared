@@ -1,0 +1,539 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@400;700;800;900&family=Titillium Web:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,600;0,700;1,400&display=swap");
+
+:root {
+  --dark-red: rgba(109, 28, 28, 1);
+  --dark-green: rgb(18, 85, 5);
+  --text-gr: rgba(0, 0, 0, 0.75);
+  --bg-clr: rgb(242, 250, 250);
+}
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  background-color: var(--bg-clr);
+  color: var(--text-gr);
+}
+h2,
+h3,
+h4,
+h5 {
+  color: var(--dark-red);
+}
+h1 {
+  font-size: 5rem;
+  color: var(--bg-clr);
+}
+h2 {
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.2rem;
+}
+p {
+  font-family: "Bitter", sans-serif;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 1.15rem;
+}
+/* HEADER */
+header {
+  max-width: 80rem;
+  margin: auto;
+  padding-inline: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+header a {
+  text-decoration: none;
+  font-weight: 400;
+}
+#brand {
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+#brand a {
+  color: var(--dark-green);
+}
+header nav {
+  display: block;
+}
+header ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1.5rem;
+}
+header ul a {
+  color: var(--dark-red);
+  text-transform: uppercase;
+}
+header ul li:hover {
+  transform: scale(1.15);
+  transition: 0.3s;
+}
+#hamburger-icon {
+  display: none;
+  margin: auto 0;
+  margin-top: -0.5rem;
+  cursor: pointer;
+}
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: var(--dark-red);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+/* Burger icon */
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+.open .bar2 {
+  opacity: 0;
+}
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-evenly;
+}
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  /* height: calc(100vh - 50px); */
+  height: auto;
+  max-width: 100%;
+  background-color: var(--dark-green);
+  /* padding-top: 1rem; */
+  z-index: 5000;
+}
+.mobile-menu li {
+  /* margin-bottom: 15px; */
+}
+.mobile-menu a {
+  color: var(--bg-clr);
+}
+/* END OF HEADER */
+
+/* HERO */
+.hero {
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/images/hero.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 60vh;
+}
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.hero-text {
+  position: relative;
+  background-color: rgba(109, 28, 28, 0.753);
+  padding: 2.5rem;
+  z-index: 999;
+  text-align: center;
+}
+.hero-text p {
+  margin-top: -0.5rem;
+  color: var(--bg-clr);
+}
+.btn {
+  margin-top: 1.3rem;
+  padding: 0.2rem 2rem;
+  background-color: rgb(22, 153, 55);
+  color: var(--bg-clr);
+  border: 0;
+  font-family: "Bitter";
+  font-weight: 700;
+}
+.btn:hover {
+  background-color: var(--dark-green);
+}
+
+/* ABOUT */
+.about {
+  position: relative;
+  padding: 4rem 2.2rem;
+  background-color: white;
+  text-align: center;
+}
+.about h2 {
+  padding: 3rem 0;
+}
+.about p {
+  /* width: 70ch; */
+}
+/* END OF ABOUT */
+
+/* FR NUMBERS */
+.fr-numbers {
+  padding: 1rem 2rem;
+  /* background-color: var(--dark-red);
+   */
+  background-color: var(--bg-clr);
+  /* box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px; */
+}
+.fr-stats {
+  background-color: var(--bg-clr);
+  display: flex;
+  justify-content: space-evenly;
+}
+.item {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item p {
+  color: var(--dark-red);
+  font-family: "Titillium Web";
+}
+/* END OF FR NUMBERS */
+
+/* PRODUCTS */
+.products {
+  padding: 2rem;
+  background-color: white;
+}
+.products-text {
+  padding-top: 3rem;
+  text-align: center;
+}
+.products p {
+  padding: 1rem 0;
+  max-width: 65ch;
+  margin: auto;
+}
+/* .products h2 {
+  text-align: center;
+} */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+.card {
+  max-width: 32%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  padding: 1rem;
+  background-color: white;
+}
+.card p {
+  font-size: 1rem;
+  font-family: "Titillium Web";
+}
+.card-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card img {
+  width: 50%;
+  margin: auto;
+}
+.card h5 {
+  padding-top: 1rem;
+}
+.card-body p {
+  padding: 0;
+}
+/* Style the Headings that are used to open and close the accordion panel */
+.accordion {
+  width: 100%;
+  /* background-color: rgba(104, 22, 22, 0.8); */
+  /* color: rgb(255, 255, 255); */
+  color: rgba(104, 22, 22, 0.8);
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 2%;
+}
+/* Change color of the heading and icon (on hover and click) */
+.active,
+.accordion:hover,
+.accordion:hover::after {
+  /* background-color: rgb(104, 22, 22); */
+  /* color: white; */
+}
+/* Add "plus" sign (+) after Accordion */
+.accordion::after {
+  content: "\002B";
+  /* color: rgb(255, 255, 255); */
+  color: rgba(104, 22, 22, 0.8);
+  font-weight: bold;
+  float: right;
+}
+/* Add "minus" sign (-) after Accordion (when accordion is active) */
+.active::after {
+  content: "\2212";
+  /* color: rgb(255, 255, 255); */
+  color: rgba(104, 22, 22, 0.8);
+}
+/* Style the accordion panel */
+.accordion-panel {
+  /* background-color: rgb(242, 250, 250); */
+  background-color: white;
+  /* padding: 2px 12px; */
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  font-size: 0.8rem;
+  margin: 0.2rem 0;
+}
+.accordion-panel-item {
+  background-color: var(--dark-red);
+  padding: 1rem;
+  color: rgb(242, 250, 250);
+  font-size: 0.8rem;
+  border-radius: 5px;
+}
+.accordion-panel p {
+  padding: 0;
+}
+/* END OF PRODUCTS */
+
+/* PACKAGING */
+.packaging {
+  /* height: 98vh; */
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: white;
+}
+.packaging-head {
+  padding-top: 1rem;
+}
+.packaging-body {
+  display: flex;
+  align-items: center;
+}
+.packaging h2 {
+  padding-bottom: 1rem;
+  text-align: center;
+}
+.packaging p {
+  width: 60ch;
+}
+.packaging-body h4 {
+  padding: 1rem 0;
+}
+.packaging-types .accordion {
+  max-width: 80%;
+}
+.packaging-types p {
+  font-weight: 400;
+  color: var(--text-gr);
+}
+.packaging-image {
+  margin-top: 5rem;
+  border-radius: 5px;
+}
+/* END OF PACKAGING */
+
+/* STORING */
+.storing {
+  margin-top: 1rem;
+  padding: 2rem;
+  /* background-color: white; */
+  /* display: flex; */
+  /* background-image: url(/images/fresh.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left; */
+  height: 60vh;
+}
+.storing h2 {
+  padding-bottom: 2rem;
+}
+.storing-text {
+  background-color: rgba(255, 255, 255, 0.801);
+  max-width: 50%;
+}
+.storing p {
+  max-width: 45ch;
+  padding: 2rem 0;
+}
+.storing-image {
+  max-width: 100%;
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+/* END OF STORING */
+
+/* MEDIA QUERIES */
+@media (max-width: 576px) {
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  header {
+    padding: 1.2rem;
+    height: 50px;
+  }
+  nav ul {
+    display: none;
+  }
+  #hamburger-icon {
+    display: block;
+  }
+  .mobile-menu {
+    padding: 1rem;
+  }
+  /* HERO */
+  .hero {
+    max-width: 100%;
+    height: 40vh;
+    flex-direction: row;
+    background-size: cover;
+    padding: 0;
+  }
+  .hero-text {
+    width: 100%;
+    text-align: left;
+    padding: 1.2rem;
+  }
+
+  /* ABOUT */
+  .about {
+    padding: 1.4rem;
+    background-color: white;
+    text-align: left;
+  }
+  .about h2 {
+    padding: 2rem 0;
+  }
+  /* END OF ABOUT */
+
+  /* FR NUMBERS */
+  .fr-numbers {
+    padding: 1rem;
+  }
+  .item {
+    padding: 2rem 1rem;
+  }
+  .item p {
+    color: var(--dark-red);
+    font-family: "Titillium Web";
+  }
+  /* END OF FR NUMBERS */
+
+  /* PRODUCTS */
+  .products {
+    padding: 1.4rem;
+    background-color: white;
+  }
+  .products-text {
+    padding-top: 3rem;
+    text-align: left;
+  }
+  .products p {
+    padding: 2rem 0;
+  }
+  .card-container {
+    flex-direction: column;
+    gap: 1.4rem;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .card {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    padding: 1.4rem;
+    background-color: white;
+  }
+  .card p {
+    font-size: 1rem;
+    font-family: "Titillium Web";
+  }
+  .card img {
+    width: 30%;
+  }
+  .card h5 {
+    padding-top: 1rem;
+  }
+  .card-body p {
+    padding: 0;
+  }
+  /* END OF PRODUCTS */
+
+  /* PACKAGING */
+  .packaging {
+    max-width: 100%;
+    margin: auto;
+    margin-top: 3rem;
+    padding: 1.4rem;
+    background-color: white;
+  }
+  .packaging-head {
+    padding-top: 1rem;
+  }
+  .packaging-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: left;
+  }
+  .packaging h2 {
+    padding-bottom: 1rem;
+    text-align: left;
+  }
+  .packaging p {
+    max-width: 38ch;
+    font-size: 1rem;
+  }
+  .packaging-body h4 {
+    padding: 1rem 0;
+  }
+  .packaging-types .accordion {
+    max-width: 80%;
+    font-size: 0.9rem;
+  }
+  .packaging-types p {
+    font-weight: 400;
+    color: var(--text-gr);
+  }
+  .packaging-image {
+    display: none;
+  }
+  /* END OF PACKAGING */
+}
